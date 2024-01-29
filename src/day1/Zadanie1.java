@@ -2,8 +2,8 @@ package day1;
 
 public class Zadanie1 {
     public static void main(String[] args) {
-        int in = 10;
-        System.out.println("Значение переменной in с типом int равно " + in);
+        int intValue = 10;
+        System.out.println("Значение переменной intValue с типом int равно " + intValue);
         byte by = 15;
         System.out.println("Значение переменной by с типом byte равно " + by);
         short sh = 5;
