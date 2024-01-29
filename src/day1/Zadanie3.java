@@ -6,9 +6,9 @@ public class Zadanie3 {
         int salaryDenis = 83690;
         int salaryKristina = 76230;
 
-        int anualIncomeMasha = 813120;
-        int anualIncomeDenis = 1004280;
-        int anualIncomeKristina = 914760;
+        int anualIncomeMasha = salaryMasha * 12;
+        int anualIncomeDenis = salaryDenis * 12;
+        int anualIncomeKristina = salaryKristina * 12;
 
         int increasedSalaryMasha = salaryMasha * 10 / 100 + salaryMasha;
         int increasedSalaryDenis = salaryDenis * 10 / 100 + salaryDenis;
