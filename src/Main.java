@@ -3,11 +3,131 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
-        task2();
+        System.out.println("Задача 1");
+        System.out.println(sum(5));
+        System.out.println("Задача 2");
+        System.out.println(getFactorial(5));
+        System.out.println("Задача 3");
+        System.out.println(getFibonacci(7));
+        System.out.println("Задача 4");
+        wrap();
+        System.out.println("Задача 5");
+        arithmeticOperations();
+        System.out.println("Задача 6");
+        comparison();
+        System.out.println("Задача 7");
+        checkTimeWithPrimitive();
         System.out.println();
-        System.out.println(task3());
-        task4();
+        checkTimeWithWrapper();
+        System.out.println("Задача 8");
+        maxMinZnach();
+    }
+    public static int sum(int num) {
+        if (num < 1) {
+            return 0;
+        } else {
+            return num + sum(num - 1);
+        }
+    }
+
+    public static int getFactorial(int f) {
+        if (f <= 1) {
+            return 1;
+        } else {
+            return f * getFactorial(f - 1);
+        }
+    }
+
+    public static int getFibonacci(int n) {
+        if (n == 0 || n == 1) {
+            return n;
+        }  else {
+            return getFibonacci(n - 1) + getFibonacci(n - 2);
+        }
+    }
+
+    public static void wrap(){
+        int inValue = 6;
+        Integer x = inValue;
+        System.out.println("Примитивный тип равен " + inValue + ", упакованный объект равен " + x + ".");
+
+        double d = 10.2;
+        Double dou = d;
+        System.out.println("Примитивный тип равен " + d + ", упакованный объект равен " + dou + ".");
+        boolean b = true;
+        Boolean bo = b;
+        System.out.println("Примитивный тип равен " + b + ", упакованный объект равен " + bo + ".");
+    }
+
+    public static void arithmeticOperations(){
+        int a = 5;
+        Integer integer = 10;
+        int sum = a + integer;
+        System.out.println(sum);
+
+        double d = 11.8;
+        Double doo = 5.8;
+        double rest = d - doo;
+        System.out.println(rest);
+    }
+
+    public static void comparison(){
+        Integer a = 6;
+        Integer b = 6;
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
+
+        System.out.println("За пределами диапазона от -128 и 127");
+
+        Integer in = -129;
+        Integer c = -129;
+        System.out.println(in == c);
+        System.out.println(in.equals(c));
+    }
+
+    public static void checkTimeWithPrimitive(){
+        long startTime = System.currentTimeMillis();
+        int sum = 0;
+        int in = 0;
+        while (in < 10_000_000){
+            in++;
+            sum += in;
+        }
+        long endTime = System.currentTimeMillis();
+        long duration = endTime - startTime;
+        System.out.println("Время выполнения операции: " + duration + " миллисекунд");
+    }
+    public static void checkTimeWithWrapper(){
+        long startTime = System.currentTimeMillis();
+        Integer sum = 0;
+        for (int i = 0; i < 10_000_000; i++){
+            sum += i;
+        }
+        long endTime = System.currentTimeMillis();
+        long duration = endTime - startTime;
+        System.out.println("Время выполнения операции: " + duration + " миллисекунд");
+    }
+
+    public static void maxMinZnach(){
+        Integer i = Integer.MAX_VALUE;
+        System.out.println(i);
+        i++;
+        System.out.println(i);
+        Integer inValue = Integer.MIN_VALUE;
+        System.out.println(inValue);
+        inValue--;
+        System.out.println(inValue);
+
+        System.out.println();
+
+        Long l = Long.MAX_VALUE;
+        System.out.println(l);
+        l++;
+        System.out.println(l);
+        Long lo = Long.MIN_VALUE;
+        System.out.println(lo);
+        lo--;
+        System.out.println(lo);
     }
     public static void doFirstHomework(){
         int intValue = 10;
